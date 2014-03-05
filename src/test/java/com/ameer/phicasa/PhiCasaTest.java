@@ -21,7 +21,8 @@ import org.testng.annotations.Test;
  */
 public class PhiCasaTest {
     
-    private static Sampleler sample;
+    private static Sampleler createSample;
+    private static Sampleler updateSample;
     
     public PhiCasaTest() {
     }
@@ -30,14 +31,21 @@ public class PhiCasaTest {
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void AssertSampleler() {
+    public void CreateSampleler() {
+        Assert.assertEquals(createSample.getEmpID(), "SMPL8520");
+        Assert.assertEquals(updateSample.getEmpName(), "Scrappy");
+    }
+    
+    @Test
+    public void UpdateSampleler(){
         
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        sample = new Sampleler.Builder("8520").build();
-        Assert.assertEquals(sample.getEmpID(), "SMPL8520");
+        createSample = new Sampleler.Builder("8520").empName("Ameer").build();
+        updateSample = new Sampleler.Builder("8520").empName("Scrappy").build();
+        
     }
 
     @AfterClass
