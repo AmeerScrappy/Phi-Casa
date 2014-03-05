@@ -19,12 +19,12 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class PhiCasaTest {
+public class SamplelerTest {
     
     private static Sampleler createSample;
     private static Sampleler updateSample;
     
-    public PhiCasaTest() {
+    public SamplelerTest() {
     }
 
     // TODO add test methods here.
@@ -33,12 +33,11 @@ public class PhiCasaTest {
     @Test
     public void CreateSampleler() {
         Assert.assertEquals(createSample.getEmpID(), "SMPL8520");
-        Assert.assertEquals(updateSample.getEmpName(), "Scrappy");
     }
     
     @Test
     public void UpdateSampleler(){
-        
+        Assert.assertEquals(updateSample.getEmpName(), "Scrappy");
     }
 
     @BeforeClass
