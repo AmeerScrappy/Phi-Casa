@@ -6,6 +6,10 @@
 
 package com.ameer.phicasa.model.employees;
 
+import com.ameer.phicasa.model.garment.Garment;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author student
@@ -16,6 +20,7 @@ public final class FashionDesigner implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
+    private List<Garment> garmentList;// = new ArrayList<Garment>();
 
     private FashionDesigner(){
         
@@ -26,6 +31,8 @@ public final class FashionDesigner implements Employee{
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
         EmpPhoneNumber = build.EmpPhoneNumber;
+        garmentList = build.garmentList;
+        
     }
     
     public String getEmpID() {
@@ -43,6 +50,11 @@ public final class FashionDesigner implements Employee{
     public String getEmpPhoneNumber() {
         return EmpPhoneNumber;
     }
+
+    public List<Garment> getGarment() {
+        return garmentList;
+    }
+    
     
     public static class Builder{
         
@@ -50,6 +62,7 @@ public final class FashionDesigner implements Employee{
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
+        private List<Garment> garmentList;
         
         public Builder(String EmpID){
             this.EmpID = "FAD"+EmpID;
@@ -69,6 +82,10 @@ public final class FashionDesigner implements Employee{
             EmpPhoneNumber = phoneNum;
             return this;
         }     
+        public Builder garmentList(List<Garment> list){
+            garmentList = list;
+            return this;
+        }
         
         public FashionDesigner build(){
             return new FashionDesigner(this);
