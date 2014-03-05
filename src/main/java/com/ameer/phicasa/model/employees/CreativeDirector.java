@@ -10,18 +10,18 @@ package com.ameer.phicasa.model.employees;
  *
  * @author student
  */
-public final class Sampleler implements Employee{
-
+public final class CreativeDirector implements Employee{
+    
     private String EmpID;
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
 
-    private Sampleler(){
+    private CreativeDirector(){
         
     }
     
-    private Sampleler(Builder build){
+    private CreativeDirector(Builder build){
         EmpID = build.EmpID;
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
@@ -52,7 +52,7 @@ public final class Sampleler implements Employee{
         private String EmpPhoneNumber;
         
         public Builder(String EmpID){
-            this.EmpID = "SMPL"+EmpID;
+            this.EmpID = "CEO"+EmpID;
         }
     
         public Builder empName(String name){
@@ -70,8 +70,8 @@ public final class Sampleler implements Employee{
             return this;
         }     
         
-        public Sampleler build(){
-            return new Sampleler(this);
+        public CreativeDirector build(){
+            return new CreativeDirector(this);
         }
     }
 
@@ -90,12 +90,10 @@ public final class Sampleler implements Employee{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Sampleler other = (Sampleler) obj;
+        final CreativeDirector other = (CreativeDirector) obj;
         if ((this.EmpID == null) ? (other.EmpID != null) : !this.EmpID.equals(other.EmpID)) {
             return false;
         }
         return true;
     }
-    
-    
 }

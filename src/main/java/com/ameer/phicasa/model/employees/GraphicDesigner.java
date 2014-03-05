@@ -10,18 +10,18 @@ package com.ameer.phicasa.model.employees;
  *
  * @author student
  */
-public final class Grader implements Employee{
+public final class GraphicDesigner implements  Employee{
     
     private String EmpID;
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
 
-    private Grader(){
+    private GraphicDesigner(){
         
     }
     
-    private Grader(Builder build){
+    private GraphicDesigner(Builder build){
         EmpID = build.EmpID;
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
@@ -52,7 +52,7 @@ public final class Grader implements Employee{
         private String EmpPhoneNumber;
         
         public Builder(String EmpID){
-            this.EmpID = "GRD"+EmpID;
+            this.EmpID = "GPD"+EmpID;
         }
     
         public Builder empName(String name){
@@ -70,8 +70,8 @@ public final class Grader implements Employee{
             return this;
         }     
         
-        public Grader build(){
-            return new Grader(this);
+        public GraphicDesigner build(){
+            return new GraphicDesigner(this);
         }
     }
 
@@ -90,11 +90,10 @@ public final class Grader implements Employee{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Grader other = (Grader) obj;
+        final GraphicDesigner other = (GraphicDesigner) obj;
         if ((this.EmpID == null) ? (other.EmpID != null) : !this.EmpID.equals(other.EmpID)) {
             return false;
         }
         return true;
     }
-    
 }

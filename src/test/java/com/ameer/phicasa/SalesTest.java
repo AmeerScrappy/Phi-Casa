@@ -6,7 +6,7 @@
 
 package com.ameer.phicasa;
 
-import com.ameer.phicasa.model.employees.Sampleler;
+import com.ameer.phicasa.model.employees.SalesTeam;
 import junit.framework.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,12 +19,12 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class SamplelerTest {
+public class SalesTest {
     
-    private static Sampleler createSample;
-    private static Sampleler updateSample;
+    private static SalesTeam createSample;
+    private static SalesTeam updateSample;
     
-    public SamplelerTest() {
+    public SalesTest() {
     }
 
     // TODO add test methods here.
@@ -44,8 +44,8 @@ public class SamplelerTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        createSample = new Sampleler.Builder("8520").empName("Ameer").build();
-        updateSample = new Sampleler.Builder("8520").empName("Scrappy").build();
+        createSample = new SalesTeam.Builder("8520").empName("Ameer").build();
+        updateSample = new SalesTeam.Builder("8520").empName("Scrappy").build();
         
     }
 
