@@ -7,6 +7,7 @@
 package com.ameer.phicasa;
 
 import com.ameer.phicasa.model.employees.Grader;
+import org.junit.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
@@ -24,14 +25,23 @@ public class GraderTest {
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
-    //
+    
     @Test
     public void createGreader() {
+        Assert.assertEquals(createGrader.getEmpID(), "GRD21212");
+        Assert.assertEquals(createGrader.getEmpName(), "Paul");
+    }
+    
+    @Test
+    public void updateGrader(){
+        Assert.assertEquals(createGrader.getEmpID(), "GRD21212");
+        Assert.assertEquals(updateGrader.getEmpName(), "Jack");
     }
 
     @org.testng.annotations.BeforeClass
     public static void setUpClass() throws Exception {
-        createGrader = new Grader.Builder("")
+        createGrader = new Grader.Builder("21212").empName("Paul").build();
+        updateGrader = new Grader.Builder("21212").empName("Jack").build();
     }
 
     @org.testng.annotations.AfterClass

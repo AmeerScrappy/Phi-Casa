@@ -33,10 +33,12 @@ public class SamplelerTest {
     @Test
     public void CreateSampleler() {
         Assert.assertEquals(createSample.getEmpID(), "SMPL8520");
+        Assert.assertEquals(updateSample.getEmpName(), "Ameer");
     }
     
     @Test
     public void UpdateSampleler(){
+        Assert.assertEquals(updateSample.getEmpID(), "SMPL8520");
         Assert.assertEquals(updateSample.getEmpName(), "Scrappy");
     }
 

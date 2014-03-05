@@ -52,7 +52,7 @@ public class Grader implements Employee{
         private String EmpPhoneNumber;
         
         public Builder(String EmpID){
-            this.EmpID = "SMPL"+EmpID;
+            this.EmpID = "GRD"+EmpID;
         }
     
         public Builder empName(String name){
