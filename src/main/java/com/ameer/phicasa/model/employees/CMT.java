@@ -19,6 +19,8 @@ public final class CMT implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;    
+    private Boolean Construt;
+    private Double EmpSalary;
     private List<Garment> garmentList;
 
     private CMT(){
@@ -30,6 +32,9 @@ public final class CMT implements Employee{
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
         EmpPhoneNumber = build.EmpPhoneNumber;
+        Construt = build.Construt;
+        EmpSalary = build.EmpSalary;
+        garmentList = build.garmentList;
     }
     
     public String getEmpID() {
@@ -47,8 +52,16 @@ public final class CMT implements Employee{
     public String getEmpPhoneNumber() {
         return EmpPhoneNumber;
     }
+
+    public Boolean isConstrut() {
+        return Construt;
+    }
+
+    public Double getEmpSalary() {
+        return EmpSalary;
+    }
     
-    public List<Garment> getGarment() {
+    public List<Garment> getGarmentList() {
         return garmentList;
     }
     
@@ -58,6 +71,8 @@ public final class CMT implements Employee{
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
+        private Boolean Construt;
+        private Double EmpSalary;
         private List<Garment> garmentList;
         
         public Builder(String EmpID){
@@ -79,7 +94,17 @@ public final class CMT implements Employee{
             return this;
         }     
         
-        public Builder garmentList(List<Garment> list){
+        public Builder isConstruct(Boolean make){
+            Construt = make;
+            return this;
+        }
+        
+        public Builder getEmpSalary(Double sal){
+            EmpSalary = sal;
+            return this;
+        }
+        
+        public Builder getGarmentList(List<Garment> list){
             garmentList = list;
             return this;
         }

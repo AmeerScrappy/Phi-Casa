@@ -19,6 +19,7 @@ public final class Grader implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
+    private Boolean masterPattern = false; 
     private List<Garment> garmentList;
 
     private Grader(){
