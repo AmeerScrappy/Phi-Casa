@@ -6,6 +6,9 @@
 
 package com.ameer.phicasa.model.employees;
 
+import com.ameer.phicasa.model.garment.Garment;
+import java.util.List;
+
 /**
  *
  * @author student
@@ -15,7 +18,8 @@ public final class CMT implements Employee{
     private String EmpID;
     private String EmpName;
     private String EmpSurname;
-    private String EmpPhoneNumber;
+    private String EmpPhoneNumber;    
+    private List<Garment> garmentList;
 
     private CMT(){
         
@@ -44,12 +48,17 @@ public final class CMT implements Employee{
         return EmpPhoneNumber;
     }
     
+    public List<Garment> getGarment() {
+        return garmentList;
+    }
+    
     public static class Builder{
         
         private String EmpID;
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
+        private List<Garment> garmentList;
         
         public Builder(String EmpID){
             this.EmpID = "CMT"+EmpID;
@@ -69,6 +78,11 @@ public final class CMT implements Employee{
             EmpPhoneNumber = phoneNum;
             return this;
         }     
+        
+        public Builder garmentList(List<Garment> list){
+            garmentList = list;
+            return this;
+        }
         
         public CMT build(){
             return new CMT(this);

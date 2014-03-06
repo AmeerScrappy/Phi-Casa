@@ -6,6 +6,9 @@
 
 package com.ameer.phicasa.model.employees;
 
+import com.ameer.phicasa.model.garment.Garment;
+import java.util.List;
+
 /**
  *
  * @author student
@@ -16,6 +19,7 @@ public final class GraphicDesigner implements  Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
+    private List<Garment> garmentList;
 
     private GraphicDesigner(){
         
@@ -44,12 +48,17 @@ public final class GraphicDesigner implements  Employee{
         return EmpPhoneNumber;
     }
     
+    public List<Garment> getGarment() {
+        return garmentList;
+    }
+    
     public static class Builder{
         
         private String EmpID;
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
+        private List<Garment> garmentList;
         
         public Builder(String EmpID){
             this.EmpID = "GPD"+EmpID;
@@ -69,6 +78,11 @@ public final class GraphicDesigner implements  Employee{
             EmpPhoneNumber = phoneNum;
             return this;
         }     
+        
+        public Builder garmentList(List<Garment> list){
+            garmentList = list;
+            return this;
+        }
         
         public GraphicDesigner build(){
             return new GraphicDesigner(this);

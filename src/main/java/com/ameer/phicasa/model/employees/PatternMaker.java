@@ -6,6 +6,9 @@
 
 package com.ameer.phicasa.model.employees;
 
+import com.ameer.phicasa.model.garment.Garment;
+import java.util.List;
+
 /**
  *
  * @author student
@@ -16,6 +19,8 @@ public final class PatternMaker implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
+    private Integer PanelNumber;
+    private List<Garment> garmentList;
 
     private PatternMaker(){
         
@@ -26,6 +31,7 @@ public final class PatternMaker implements Employee{
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
         EmpPhoneNumber = build.EmpPhoneNumber;
+        PanelNumber = build.PanelNumber;
     }
     
     public String getEmpID() {
@@ -44,12 +50,22 @@ public final class PatternMaker implements Employee{
         return EmpPhoneNumber;
     }
     
+    public Integer getPanelNumber(){
+        return PanelNumber;        
+    }
+    
+    public List<Garment> getGarment() {
+        return garmentList;
+    }
+    
     public static class Builder{
         
         private String EmpID;
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
+        private Integer PanelNumber;
+        private List<Garment> garmentList;
         
         public Builder(String EmpID){
             this.EmpID = "PTM"+EmpID;
@@ -70,6 +86,16 @@ public final class PatternMaker implements Employee{
             return this;
         }     
         
+        public Builder garmentList(List<Garment> list){
+            garmentList = list;
+            return this;
+        }
+        
+        public Builder PanelNumber(Integer panel){
+            PanelNumber = panel;
+            return this;            
+        }
+         
         public PatternMaker build(){
             return new PatternMaker(this);
         }

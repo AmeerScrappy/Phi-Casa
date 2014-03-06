@@ -20,7 +20,7 @@ public final class FashionDesigner implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
-    private List<Garment> garmentList;// = new ArrayList<Garment>();
+    private List<Garment> garmentList;
 
     private FashionDesigner(){
         
