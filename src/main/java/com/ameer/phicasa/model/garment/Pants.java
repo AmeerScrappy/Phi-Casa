@@ -59,7 +59,7 @@ public final class Pants implements Garment{
         String GarmentFabric;
         
         public Builder(String GarmentID){
-            this.GarmentID = "PAN"+GarmentID;
+            this.GarmentID = "PANT"+GarmentID;
         }
         
         public Builder garmentID(String name){
