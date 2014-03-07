@@ -27,6 +27,7 @@ public final class GraphicDesigner implements  Employee{
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
         EmpPhoneNumber = build.EmpPhoneNumber;
+        CampaignIdea = build.CampaignIdea;
     }
     
     public String getEmpID() {
@@ -76,7 +77,7 @@ public final class GraphicDesigner implements  Employee{
             return this;
         }     
         
-        public Builder garmentList(String idea){
+        public Builder CampaignIdea(String idea){
             CampaignIdea = idea;
             return this;
         }

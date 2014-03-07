@@ -7,7 +7,6 @@
 package com.ameer.phicasa.model.employees;
 
 import com.ameer.phicasa.model.garment.Garment;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

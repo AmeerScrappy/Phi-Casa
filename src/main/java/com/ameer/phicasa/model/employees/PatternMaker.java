@@ -19,7 +19,7 @@ public final class PatternMaker implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
-    private Integer PanelNumber;
+    private int PanelNumber;
     private List<Garment> garmentList;
 
     private PatternMaker(){
@@ -50,7 +50,7 @@ public final class PatternMaker implements Employee{
         return EmpPhoneNumber;
     }
     
-    public Integer getPanelNumber(){
+    public int getPanelNumber(){
         return PanelNumber;        
     }
     
@@ -64,7 +64,7 @@ public final class PatternMaker implements Employee{
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
-        private Integer PanelNumber;
+        private int PanelNumber;
         private List<Garment> garmentList;
         
         public Builder(String EmpID){
@@ -91,7 +91,7 @@ public final class PatternMaker implements Employee{
             return this;
         }
         
-        public Builder PanelNumber(Integer panel){
+        public Builder PanelNumber(int panel){
             PanelNumber = panel;
             return this;            
         }

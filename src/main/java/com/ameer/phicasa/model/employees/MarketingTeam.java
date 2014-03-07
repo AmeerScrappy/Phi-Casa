@@ -16,6 +16,7 @@ public final class MarketingTeam implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
+    private String TargetMarket;
 
     private MarketingTeam(){
         
@@ -26,6 +27,7 @@ public final class MarketingTeam implements Employee{
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
         EmpPhoneNumber = build.EmpPhoneNumber;
+        TargetMarket = build.TargetMarket;
     }
     
     public String getEmpID() {
@@ -43,6 +45,10 @@ public final class MarketingTeam implements Employee{
     public String getEmpPhoneNumber() {
         return EmpPhoneNumber;
     }
+
+    public String getTargetMarket() {
+        return TargetMarket;
+    }
     
     public static class Builder{
         
@@ -50,6 +56,7 @@ public final class MarketingTeam implements Employee{
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
+        private String TargetMarket;
         
         public Builder(String EmpID){
             this.EmpID = "MAR"+EmpID;
@@ -69,6 +76,11 @@ public final class MarketingTeam implements Employee{
             EmpPhoneNumber = phoneNum;
             return this;
         }     
+        
+        public Builder TargetMarket(String market){
+            TargetMarket = market;
+            return this;
+        }
         
         public MarketingTeam build(){
             return new MarketingTeam(this);
