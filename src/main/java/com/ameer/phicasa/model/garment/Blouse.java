@@ -30,27 +30,22 @@ public final class Blouse implements Garment{
         GarmentFabric = build.GarmentFabric;
     }
 
-    @Override
     public String getGarmentID() {
         return GarmentID;
     }
 
-    @Override
     public String getGarmentName() {
         return GarmentName;
     }
 
-    @Override
     public String getGarmentSize() {
         return GarmentSize;
     }
 
-    @Override
     public String getGarmentColor() {
         return GarmentColor;
     }
 
-    @Override
     public String getGarmentFabric() {
         return GarmentFabric;
     }
@@ -109,10 +104,7 @@ public final class Blouse implements Garment{
             return false;
         }
         final Blouse other = (Blouse) obj;
-        if ((this.GarmentID == null) ? (other.GarmentID != null) : !this.GarmentID.equals(other.GarmentID)) {
-            return false;
-        }
-        return true;
+        return !((this.GarmentID == null) ? (other.GarmentID != null) : !this.GarmentID.equals(other.GarmentID));
     }   
     
 }
