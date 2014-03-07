@@ -6,12 +6,9 @@
 
 package com.ameer.phicasa;
 
-import com.ameer.phicasa.model.employees.CMT;
-import com.ameer.phicasa.model.garment.Blouse;
-import com.ameer.phicasa.model.garment.Garment;
-import java.util.ArrayList;
-import java.util.List;
-import junit.framework.Assert;
+import com.ameer.phicasa.model.employees.DistributionTeam;
+import org.testng.Assert;
+import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -22,35 +19,33 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class CMTTest {
+public class DistributionTeamTest {
     
-    private static CMT createCMT;
-    private static CMT updateCMT;
-    public static Blouse BLS1;
+    private static DistributionTeam createDistributionTeam;
+    private static DistributionTeam updateDistributionTeam;
     
-    public CMTTest() {
+    public DistributionTeamTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void createCMT() {
-        Assert.assertEquals(createCMT.getEmpID(), "CMT33495");
+    public void createDistributionTeam() {
+        
+        Assert.assertEquals(createDistributionTeam.getDeliveryAddress(), "Nowwhere");
     }
+    
     @Test
-    public void updateCMT(){
-        Assert.assertEquals(updateCMT.getEmpID(), "CMT123456");
-        Assert.assertEquals(updateCMT.getEmpSalary(), 3000.0);
+    public void updateDistributionTeam(){
+        
+        Assert.assertEquals(updateDistributionTeam.getDeliveryAddress(), "Somewhere");
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        List<Garment> L = new ArrayList<Garment>();
-        BLS1 = new Blouse.Builder("1").build();
-        L.add(BLS1);
-        createCMT = new CMT.Builder("33495").getGarmentList(L).build();
-        updateCMT = new CMT.Builder("123456").getGarmentList(L).getEmpSalary(3000.0).empName("Jaul").build();
+        createDistributionTeam = new DistributionTeam.Builder("789").DeliveryAddress("Nowwhere").build();
+        updateDistributionTeam = new DistributionTeam.Builder("789").DeliveryAddress("Somewhere").build();
     }
 
     @AfterClass

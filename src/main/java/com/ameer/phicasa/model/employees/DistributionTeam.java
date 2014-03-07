@@ -16,6 +16,7 @@ public final class DistributionTeam implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
+    private String DeliveryAddress;
 
     private DistributionTeam(){
         
@@ -26,6 +27,7 @@ public final class DistributionTeam implements Employee{
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
         EmpPhoneNumber = build.EmpPhoneNumber;
+        DeliveryAddress = build.DeliveryAddress;
     }
     
     public String getEmpID() {
@@ -43,6 +45,10 @@ public final class DistributionTeam implements Employee{
     public String getEmpPhoneNumber() {
         return EmpPhoneNumber;
     }
+
+    public String getDeliveryAddress() {
+        return DeliveryAddress;
+    }
     
     public static class Builder{
         
@@ -50,6 +56,7 @@ public final class DistributionTeam implements Employee{
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
+        private String DeliveryAddress;
         
         public Builder(String EmpID){
             this.EmpID = "DIS"+EmpID;
@@ -69,6 +76,11 @@ public final class DistributionTeam implements Employee{
             EmpPhoneNumber = phoneNum;
             return this;
         }     
+        
+        public Builder DeliveryAddress(String add){
+            DeliveryAddress = add;
+            return this;
+        }
         
         public DistributionTeam build(){
             return new DistributionTeam(this);
