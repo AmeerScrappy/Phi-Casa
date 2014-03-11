@@ -5,11 +5,13 @@
  */
 
 package com.ameer.phicasa.service.crud;
-import com.ameer.phicasa.model.garment.Blouse;
+
+import com.ameer.phicasa.model.employees.Grader;
+
 /**
  *
  * @author student
  */
-public interface BlouseCrudService extends CrudService<Blouse, String>{
+public interface GraderCrudService extends CrudService<Grader, String>{
     
 }

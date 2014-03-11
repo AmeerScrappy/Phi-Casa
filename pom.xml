@@ -75,7 +75,6 @@
          <groupId>com.ameer</groupId>
          <artifactId>PhiCasa</artifactId>
          <version>Version-1</version>
-         <scope>test</scope>
          <type>jar</type>
       </dependency>
    </dependencies>

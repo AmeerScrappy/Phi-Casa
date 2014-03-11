@@ -5,8 +5,9 @@
  */
 
 package com.ameer.phicasa.service.crud.Impl;
-import com.ameer.phicasa.model.garment.Blouse;
-import com.ameer.phicasa.service.crud.BlouseCrudService;
+
+import com.ameer.phicasa.model.garment.Jacket;
+import com.ameer.phicasa.service.crud.JacketCrudService;
 import java.util.List;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,36 +16,35 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author student
  */
-public class BlouseCrudServiceImpl implements BlouseCrudService{
+public class JacketCrudServiceImpl implements JacketCrudService{
     
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public Blouse find(String s) {
+    public Jacket find(String s) {
         return null;
     }
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
-    public Blouse persist(Blouse entity) {
+    public Jacket persist(Jacket entity) {
         return null;
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public Blouse merge(Blouse entity) {
+    public Jacket merge(Jacket entity) {
         return null;
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public Blouse remove(Blouse entity) {
+    public Jacket remove(Jacket entity) {
         return  null;
     }
 
     @Override
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
-    public List<Blouse> findAll() {
+    public List<Jacket> findAll() {
         return null;
     }
-    
 }

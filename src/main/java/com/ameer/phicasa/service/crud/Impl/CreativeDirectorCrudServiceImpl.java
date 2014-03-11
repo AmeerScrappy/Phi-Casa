@@ -5,8 +5,9 @@
  */
 
 package com.ameer.phicasa.service.crud.Impl;
-import com.ameer.phicasa.model.garment.Blouse;
-import com.ameer.phicasa.service.crud.BlouseCrudService;
+
+import com.ameer.phicasa.model.employees.CreativeDirector;
+import com.ameer.phicasa.service.crud.CreativeDirectorCrudService;
 import java.util.List;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,35 +16,35 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author student
  */
-public class BlouseCrudServiceImpl implements BlouseCrudService{
+public class CreativeDirectorCrudServiceImpl implements CreativeDirectorCrudService{
     
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public Blouse find(String s) {
+    public CreativeDirector find(String s) {
         return null;
     }
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
-    public Blouse persist(Blouse entity) {
+    public CreativeDirector persist(CreativeDirector entity) {
         return null;
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public Blouse merge(Blouse entity) {
+    public CreativeDirector merge(CreativeDirector entity) {
         return null;
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public Blouse remove(Blouse entity) {
+    public CreativeDirector remove(CreativeDirector entity) {
         return  null;
     }
 
     @Override
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
-    public List<Blouse> findAll() {
+    public List<CreativeDirector> findAll() {
         return null;
     }
     

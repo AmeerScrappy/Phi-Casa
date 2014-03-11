@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa.service.crud;
-import com.ameer.phicasa.model.garment.Blouse;
+package com.ameer.phicasa.service.crud.Impl;
+
 /**
  *
  * @author student
  */
-public interface BlouseCrudService extends CrudService<Blouse, String>{
+public class GraphicDesignerCrudServiceImpl {
     
 }
