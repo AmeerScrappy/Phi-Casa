@@ -12,7 +12,6 @@ import org.jmock.auto.Mock;
 import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
-import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -24,7 +23,7 @@ import org.testng.annotations.Test;
  * @author student
  */
 public class BlouseTestCrudService {
-    
+    public static Blouse createBlouse;
     @Mock
     BlouseCrudService crudService;
     public BlouseTestCrudService() {
@@ -36,7 +35,7 @@ public class BlouseTestCrudService {
     @Test
     public void testCreate() throws Exception{
     
-        Blouse createBlouse = new Blouse.Builder("11").build();
+        createBlouse = new Blouse.Builder("11").build();
         Blouse returnQuestion = crudService.persist(createBlouse);
         when(crudService.persist(createBlouse)).thenReturn(returnQuestion);
         Mockito.verify(crudService).persist(createBlouse);
