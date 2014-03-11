@@ -4,14 +4,15 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
 import com.ameer.phicasa.model.employees.CMT;
 import com.ameer.phicasa.model.garment.Blouse;
 import com.ameer.phicasa.model.garment.Garment;
 import java.util.ArrayList;
 import java.util.List;
-import junit.framework.Assert;
+import org.testng.Assert;
+import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;

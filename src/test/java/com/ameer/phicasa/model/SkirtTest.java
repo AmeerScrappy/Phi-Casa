@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.employees.SalesTeam;
-import junit.framework.Assert;
+import com.ameer.phicasa.model.garment.Skirt;
+import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -19,34 +19,34 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class SalesTest {
+public class SkirtTest {
     
-    private static SalesTeam createSalesTeam;
-    private static SalesTeam updateSalesTeam;
+    private static Skirt createPants;
+    private static Skirt updatePants;
     
-    public SalesTest() {
+    public SkirtTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void CreateSampleler() {
-        Assert.assertEquals(createSalesTeam.getEmpID(), "SALE8520");
-        Assert.assertEquals(createSalesTeam.getEmpName(), "Ameer");
+    public void createBlouse() {
+        
+        Assert.assertEquals(createPants.getGarmentID(), "SKI3211");
     }
     
     @Test
-    public void UpdateSampleler(){
-        Assert.assertEquals(updateSalesTeam.getEmpID(), "SALE8520");
-        Assert.assertEquals(updateSalesTeam.getEmpName(), "Scrappy");
+    public void updateBlouse(){
+        
+        Assert.assertEquals(updatePants.getGarmentID(), "SKI78987789");
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        createSalesTeam = new SalesTeam.Builder("8520").empName("Ameer").build();
-        updateSalesTeam = new SalesTeam.Builder("8520").empName("Scrappy").build();
         
+        createPants = new Skirt.Builder("3211").build();
+        updatePants = new Skirt.Builder("78987789").build();
     }
 
     @AfterClass

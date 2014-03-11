@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.garment.Pants;
+import com.ameer.phicasa.model.employees.PatternMaker;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,34 +19,33 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class PantsTest {
+public class PatternMakerTest {
     
-    private static Pants createPants;
-    private static Pants updatePants;
-    
-    public PantsTest() {
+    private static PatternMaker createPatternMaker;
+    private static PatternMaker updatePatternMaker;
+    public PatternMakerTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void createBlouse() {
-        
-        Assert.assertEquals(createPants.getGarmentID(), "PANT3211");
+    public void createPatternMaker() {
+    
+        Assert.assertEquals(createPatternMaker.getPanelNumber(), 12);
     }
     
     @Test
-    public void updateBlouse(){
+    public void updatePatternMaker(){
         
-        Assert.assertEquals(updatePants.getGarmentID(), "PANT78987789");
+        Assert.assertEquals(updatePatternMaker.getPanelNumber(), 32);
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
         
-        createPants = new Pants.Builder("3211").build();
-        updatePants = new Pants.Builder("78987789").build();
+        createPatternMaker = new PatternMaker.Builder("01235").PanelNumber(12).build();
+        updatePatternMaker = new PatternMaker.Builder("01235").PanelNumber(32).build();
     }
 
     @AfterClass

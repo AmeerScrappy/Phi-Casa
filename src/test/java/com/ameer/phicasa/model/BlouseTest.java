@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.garment.Skirt;
+import com.ameer.phicasa.model.garment.Blouse;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,12 +19,12 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class SkirtTest {
+public class BlouseTest {
     
-    private static Skirt createPants;
-    private static Skirt updatePants;
+    private static Blouse createBlouse;
+    private static Blouse updateBlouse;
     
-    public SkirtTest() {
+    public BlouseTest() {
     }
 
     // TODO add test methods here.
@@ -33,20 +33,20 @@ public class SkirtTest {
     @Test
     public void createBlouse() {
         
-        Assert.assertEquals(createPants.getGarmentID(), "SKI3211");
+        Assert.assertEquals(createBlouse.getGarmentID(), "BLS3211");
     }
     
     @Test
     public void updateBlouse(){
         
-        Assert.assertEquals(updatePants.getGarmentID(), "SKI78987789");
+        Assert.assertEquals(updateBlouse.getGarmentID(), "BLS78987789");
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
         
-        createPants = new Skirt.Builder("3211").build();
-        updatePants = new Skirt.Builder("78987789").build();
+        createBlouse = new Blouse.Builder("3211").build();
+        updateBlouse = new Blouse.Builder("78987789").build();
     }
 
     @AfterClass

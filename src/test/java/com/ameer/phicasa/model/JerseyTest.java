@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.customers.RegularCustomer;
+import com.ameer.phicasa.model.garment.Jersey;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,34 +19,34 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class RegularCustomerTest {
+public class JerseyTest {
     
-    public static RegularCustomer createRegularCustomer;
-    public static RegularCustomer updateRegularCustomer;
+    private static Jersey createJersey;
+    private static Jersey updateJersey;
     
-    public RegularCustomerTest() {
+    public JerseyTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-   @Test
-    public void createVIPCustomer() {
+    @Test
+    public void createDress() {
     
-        Assert.assertEquals(createRegularCustomer.getCusName(), "Error");
+        Assert.assertEquals(createJersey.getGarmentID(), "JRS3211");
     }
     
     @Test
-    public void updateVIPCustomer(){
+    public void updateDress(){
         
-        Assert.assertEquals(updateRegularCustomer.getCusName(), "404");
+        Assert.assertEquals(updateJersey.getGarmentID(), "JRS78987789");
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
         
-        createRegularCustomer = new RegularCustomer.Builder("465").empName("Error").build();
-        updateRegularCustomer = new RegularCustomer.Builder("465").empName("404").build();
+        createJersey = new Jersey.Builder("3211").build();
+        updateJersey = new Jersey.Builder("78987789").build();
     }
 
     @AfterClass

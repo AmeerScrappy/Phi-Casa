@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
 import com.ameer.phicasa.model.garment.Jacket;
 import org.testng.Assert;

@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.customers.VIPCustomer;
-import junit.framework.Assert;
+import com.ameer.phicasa.model.employees.DistributionTeam;
+import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -19,34 +19,33 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class VIPCustomerTest {
+public class DistributionTeamTest {
     
-    public static VIPCustomer createVIPCustomer;
-    public static VIPCustomer updateVIPCustomer;
+    private static DistributionTeam createDistributionTeam;
+    private static DistributionTeam updateDistributionTeam;
     
-    public VIPCustomerTest() {
+    public DistributionTeamTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-   @Test
-    public void createVIPCustomer() {
-    
-        Assert.assertEquals(createVIPCustomer.getCusName(), "Error");
+    @Test
+    public void createDistributionTeam() {
+        
+        Assert.assertEquals(createDistributionTeam.getDeliveryAddress(), "Nowwhere");
     }
     
     @Test
-    public void updateVIPCustomer(){
+    public void updateDistributionTeam(){
         
-        Assert.assertEquals(updateVIPCustomer.getCusName(), "404");
+        Assert.assertEquals(updateDistributionTeam.getDeliveryAddress(), "Somewhere");
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        
-        createVIPCustomer = new VIPCustomer.Builder("465").empName("Error").build();
-        updateVIPCustomer = new VIPCustomer.Builder("465").empName("404").build();
+        createDistributionTeam = new DistributionTeam.Builder("789").DeliveryAddress("Nowwhere").build();
+        updateDistributionTeam = new DistributionTeam.Builder("789").DeliveryAddress("Somewhere").build();
     }
 
     @AfterClass

@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.garment.Shirt;
+import com.ameer.phicasa.model.employees.MarketingTeam;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,34 +19,33 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class ShirtTest {
+public class MarketingTeamTest {
     
-    private static Shirt createShirt;
-    private static Shirt updateShirt;
+    private static MarketingTeam createMarketingTeam;
+    private static MarketingTeam updateMarketingTeam;
     
-    public ShirtTest() {
+    public MarketingTeamTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void createDress() {
+    public void createMarketingTeam() {
     
-        Assert.assertEquals(createShirt.getGarmentID(), "SHI3211");
-    }
-    
-    @Test
-    public void updateDress(){
-        
-        Assert.assertEquals(updateShirt.getGarmentID(), "SHI78987789");
+        Assert.assertEquals(createMarketingTeam.getTargetMarket(), "Old ladies");
     }
 
+    @Test
+    public void updateMarketingTeam(){
+        
+        Assert.assertEquals(updateMarketingTeam.getTargetMarket(), "Younger Ladies");
+    }
     @BeforeClass
     public static void setUpClass() throws Exception {
         
-        createShirt = new Shirt.Builder("3211").build();
-        updateShirt = new Shirt.Builder("78987789").build();
+        createMarketingTeam = new MarketingTeam.Builder("564").TargetMarket("Old ladies").build();
+        updateMarketingTeam = new MarketingTeam.Builder("564").TargetMarket("Younger Ladies").build();
     }
 
     @AfterClass

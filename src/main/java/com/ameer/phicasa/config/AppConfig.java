@@ -6,12 +6,19 @@
 
 package com.ameer.phicasa.config;
 
+import com.ameer.phicasa.service.crud.BlouseCrudService;
+import com.ameer.phicasa.service.crud.Impl.BlouseCrudServiceImpl;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
+
 /**
  *
  * @author student
  */
-public class AppConfig {
-    
-    //@Bean(name = "sample")
-    //public 
+@Configurable
+public class AppConfig {    
+    @Bean(name = "questionCrudService")
+    public  BlouseCrudService getQuestionCrudService(){
+        return new BlouseCrudServiceImpl();
+    }
 }

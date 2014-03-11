@@ -4,11 +4,10 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
 import com.ameer.phicasa.model.employees.Grader;
-import org.junit.Assert;
-import static org.testng.Assert.*;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**

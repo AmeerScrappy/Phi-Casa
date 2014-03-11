@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.employees.PatternMaker;
+import com.ameer.phicasa.model.employees.SalesTeam;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,33 +19,34 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class PatternMakerTest {
+public class SalesTest {
     
-    private static PatternMaker createPatternMaker;
-    private static PatternMaker updatePatternMaker;
-    public PatternMakerTest() {
+    private static SalesTeam createSalesTeam;
+    private static SalesTeam updateSalesTeam;
+    
+    public SalesTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void createPatternMaker() {
-    
-        Assert.assertEquals(createPatternMaker.getPanelNumber(), 12);
+    public void CreateSampleler() {
+        Assert.assertEquals(createSalesTeam.getEmpID(), "SALE8520");
+        Assert.assertEquals(createSalesTeam.getEmpName(), "Ameer");
     }
     
     @Test
-    public void updatePatternMaker(){
-        
-        Assert.assertEquals(updatePatternMaker.getPanelNumber(), 32);
+    public void UpdateSampleler(){
+        Assert.assertEquals(updateSalesTeam.getEmpID(), "SALE8520");
+        Assert.assertEquals(updateSalesTeam.getEmpName(), "Scrappy");
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
+        createSalesTeam = new SalesTeam.Builder("8520").empName("Ameer").build();
+        updateSalesTeam = new SalesTeam.Builder("8520").empName("Scrappy").build();
         
-        createPatternMaker = new PatternMaker.Builder("01235").PanelNumber(12).build();
-        updatePatternMaker = new PatternMaker.Builder("01235").PanelNumber(32).build();
     }
 
     @AfterClass

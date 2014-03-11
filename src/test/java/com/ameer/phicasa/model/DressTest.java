@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.employees.GraphicDesigner;
+import com.ameer.phicasa.model.garment.Dress;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,33 +19,34 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class GraphicDesignerTest {
+public class DressTest {
     
-    private static GraphicDesigner createGraphicDesigner;
-    private static GraphicDesigner updateGraphicDesigner;
-    public GraphicDesignerTest() {
+    private static Dress createDress;
+    private static Dress updateDress;
+    
+    public DressTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void createGraphicDesigner() {
+    public void createDress() {
     
-        Assert.assertEquals(createGraphicDesigner.CampaignIdea(), "Diamonds");
+        Assert.assertEquals(createDress.getGarmentID(), "DRE3211");
+    }
+    
+    @Test
+    public void updateDress(){
+        
+        Assert.assertEquals(updateDress.getGarmentID(), "DRE78987789");
     }
 
-    @Test
-    public void updateGraphicDesigner(){
-        
-        Assert.assertEquals(updateGraphicDesigner.CampaignIdea(), "Leather");
-    }
-    
     @BeforeClass
     public static void setUpClass() throws Exception {
         
-        createGraphicDesigner = new GraphicDesigner.Builder("78987").empPhoneNum("021657898").CampaignIdea("Diamonds").build();
-        updateGraphicDesigner = new GraphicDesigner.Builder("78987").empPhoneNum("021657898").CampaignIdea("Leather").build();
+        createDress = new Dress.Builder("3211").build();
+        updateDress = new Dress.Builder("78987789").build();
     }
 
     @AfterClass

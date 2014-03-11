@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.garment.Underware;
+import com.ameer.phicasa.model.employees.FashionDesigner;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,34 +19,34 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class UnderwareTest {
+public class FashionDesignerTest {
     
-    private static Underware createUnderware;
-    private static Underware updateUnderware;
+    private static FashionDesigner createFashionDesigner;
+    private static FashionDesigner updateFashionDesigner;
     
-    public UnderwareTest() {
+    public FashionDesignerTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void createDress() {
-    
-        Assert.assertEquals(createUnderware.getGarmentID(), "UDW3211");
+    public void createFashionDesigner() {
+        
+        Assert.assertEquals(createFashionDesigner.getEmpName(), "Jackie");
     }
     
     @Test
-    public void updateDress(){
+    public void updateFashionDesigner(){
         
-        Assert.assertEquals(updateUnderware.getGarmentID(), "UDW78987789");
+        Assert.assertEquals(updateFashionDesigner.getEmpName(), "Blake");
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
         
-        createUnderware = new Underware.Builder("3211").build();
-        updateUnderware = new Underware.Builder("78987789").build();
+        createFashionDesigner = new FashionDesigner.Builder("3369").empName("Jackie").build();
+        updateFashionDesigner = new FashionDesigner.Builder("3369").empName("Blake").build();
     }
 
     @AfterClass

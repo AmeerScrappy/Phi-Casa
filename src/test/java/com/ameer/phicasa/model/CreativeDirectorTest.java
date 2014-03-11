@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.employees.MarketingTeam;
+import com.ameer.phicasa.model.employees.CreativeDirector;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,33 +19,33 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class MarketingTeamTest {
+public class CreativeDirectorTest {
     
-    private static MarketingTeam createMarketingTeam;
-    private static MarketingTeam updateMarketingTeam;
+    public static CreativeDirector createCreativeDirector;
+    public static CreativeDirector updateCreativeDirector;
     
-    public MarketingTeamTest() {
+    public CreativeDirectorTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void createMarketingTeam() {
-    
-        Assert.assertEquals(createMarketingTeam.getTargetMarket(), "Old ladies");
-    }
-
-    @Test
-    public void updateMarketingTeam(){
+    public void createCreativeDirector() {
         
-        Assert.assertEquals(updateMarketingTeam.getTargetMarket(), "Younger Ladies");
+        Assert.assertEquals(createCreativeDirector.getEmpSurname(), "Grey");
+    }
+    
+    @Test
+    public void updateCreativeDirector(){
+        
+        Assert.assertEquals(updateCreativeDirector.getEmpSurname(), "White");        
     }
     @BeforeClass
     public static void setUpClass() throws Exception {
         
-        createMarketingTeam = new MarketingTeam.Builder("564").TargetMarket("Old ladies").build();
-        updateMarketingTeam = new MarketingTeam.Builder("564").TargetMarket("Younger Ladies").build();
+        createCreativeDirector = new CreativeDirector.Builder("4956").empName("Lady").empSurname("Grey").build();
+        updateCreativeDirector = new CreativeDirector.Builder("4956").empName("Lady").empSurname("White").build();
     }
 
     @AfterClass

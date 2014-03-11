@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package com.ameer.phicasa;
+package com.ameer.phicasa.model;
 
-import com.ameer.phicasa.model.garment.Blouse;
+import com.ameer.phicasa.model.garment.Knits;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -19,34 +19,34 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class BlouseTest {
+public class KnitsTest {
     
-    private static Blouse createBlouse;
-    private static Blouse updateBlouse;
+    private static Knits createKnits;
+    private static Knits updateKnits;
     
-    public BlouseTest() {
+    public KnitsTest() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void createBlouse() {
-        
-        Assert.assertEquals(createBlouse.getGarmentID(), "BLS3211");
+    public void createDress() {
+    
+        Assert.assertEquals(createKnits.getGarmentID(), "KNI3211");
     }
     
     @Test
-    public void updateBlouse(){
+    public void updateDress(){
         
-        Assert.assertEquals(updateBlouse.getGarmentID(), "BLS78987789");
+        Assert.assertEquals(updateKnits.getGarmentID(), "KNI78987789");
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
         
-        createBlouse = new Blouse.Builder("3211").build();
-        updateBlouse = new Blouse.Builder("78987789").build();
+        createKnits = new Knits.Builder("3211").build();
+        updateKnits = new Knits.Builder("78987789").build();
     }
 
     @AfterClass
