@@ -54,10 +54,15 @@ public class FashionDesignerTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        FashionDesigner updateFashionDesigner = new FashionDesigner.Builder("11").build();
-        FashionDesigner returnQuestion = crudService.merge(updateFashionDesigner);
-        when(crudService.merge(updateFashionDesigner)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateFashionDesigner);
+        FashionDesigner deleteFashionDesigner = new FashionDesigner.Builder("11").build();
+        
+        FashionDesigner returnQuestion = crudService.merge(deleteFashionDesigner);
+        when(crudService.merge(deleteFashionDesigner)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteFashionDesigner);
+        
+        returnQuestion = crudService.remove(deleteFashionDesigner);
+        when(crudService.remove(deleteFashionDesigner)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteFashionDesigner);
     }
     
     @Test

@@ -54,10 +54,15 @@ public class JacketTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        Jacket updateJacket = new Jacket.Builder("11").build();
-        Jacket returnQuestion = crudService.merge(updateJacket);
-        when(crudService.merge(updateJacket)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateJacket);
+        Jacket deleteJacket = new Jacket.Builder("11").build();
+        
+        Jacket returnQuestion = crudService.merge(deleteJacket);
+        when(crudService.merge(deleteJacket)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteJacket);
+        
+        returnQuestion = crudService.remove(deleteJacket);
+        when(crudService.remove(deleteJacket)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteJacket);
     }
     
     @Test

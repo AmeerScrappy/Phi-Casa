@@ -53,10 +53,15 @@ public class BlouseTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        Blouse updateBlouse = new Blouse.Builder("11").build();
-        Blouse returnQuestion = crudService.merge(updateBlouse);
-        when(crudService.merge(updateBlouse)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateBlouse);
+        Blouse deleteBlouse = new Blouse.Builder("11").build();
+        
+        Blouse returnQuestion = crudService.merge(deleteBlouse);
+        when(crudService.merge(deleteBlouse)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteBlouse);
+        
+        returnQuestion = crudService.remove(deleteBlouse);
+        when(crudService.remove(deleteBlouse)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteBlouse);
     }
     
     @Test

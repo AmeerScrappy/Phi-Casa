@@ -54,10 +54,15 @@ public class CreativeDirectorTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        CreativeDirector updateCreativeDirector = new CreativeDirector.Builder("11").build();
-        CreativeDirector returnQuestion = crudService.merge(updateCreativeDirector);
-        when(crudService.merge(updateCreativeDirector)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateCreativeDirector);
+        CreativeDirector deleteCreativeDirector = new CreativeDirector.Builder("11").build();
+        
+        CreativeDirector returnQuestion = crudService.merge(deleteCreativeDirector);
+        when(crudService.merge(deleteCreativeDirector)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteCreativeDirector);
+        
+        returnQuestion = crudService.remove(deleteCreativeDirector);
+        when(crudService.remove(deleteCreativeDirector)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteCreativeDirector);
     }
     
     @Test

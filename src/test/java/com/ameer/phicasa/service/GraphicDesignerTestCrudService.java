@@ -54,10 +54,15 @@ public class GraphicDesignerTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        GraphicDesigner updateGraphicDesigner = new GraphicDesigner.Builder("11").build();
-        GraphicDesigner returnQuestion = crudService.merge(updateGraphicDesigner);
-        when(crudService.merge(updateGraphicDesigner)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateGraphicDesigner);
+        GraphicDesigner deleteGraphicDesigner = new GraphicDesigner.Builder("11").build();
+        
+        GraphicDesigner returnQuestion = crudService.merge(deleteGraphicDesigner);
+        when(crudService.merge(deleteGraphicDesigner)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteGraphicDesigner);
+        
+        returnQuestion = crudService.remove(deleteGraphicDesigner);
+        when(crudService.remove(deleteGraphicDesigner)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteGraphicDesigner);
     }
     
     @Test

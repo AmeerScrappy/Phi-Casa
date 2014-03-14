@@ -54,10 +54,15 @@ public class SkirtTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        Skirt updateSkirt = new Skirt.Builder("11").build();
-        Skirt returnQuestion = crudService.merge(updateSkirt);
-        when(crudService.merge(updateSkirt)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateSkirt);
+        Skirt deleteSkirt = new Skirt.Builder("11").build();
+        
+        Skirt returnQuestion = crudService.merge(deleteSkirt);
+        when(crudService.merge(deleteSkirt)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteSkirt);
+        
+        returnQuestion = crudService.remove(deleteSkirt);
+        when(crudService.remove(deleteSkirt)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteSkirt);
     }
     
     @Test

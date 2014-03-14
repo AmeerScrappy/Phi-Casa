@@ -54,10 +54,15 @@ public class JerseyTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        Jersey updateJersey = new Jersey.Builder("11").build();
-        Jersey returnQuestion = crudService.merge(updateJersey);
-        when(crudService.merge(updateJersey)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateJersey);
+        Jersey deleteJersey = new Jersey.Builder("11").build();
+        
+        Jersey returnQuestion = crudService.merge(deleteJersey);
+        when(crudService.merge(deleteJersey)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteJersey);
+        
+        returnQuestion = crudService.remove(deleteJersey);
+        when(crudService.remove(deleteJersey)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteJersey);
     }
     
     @Test

@@ -55,10 +55,15 @@ public class RegularCustomerTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        RegularCustomer updateRegularCustomer = new RegularCustomer.Builder("11").build();
-        RegularCustomer returnQuestion = crudService.merge(updateRegularCustomer);
-        when(crudService.merge(updateRegularCustomer)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateRegularCustomer);
+        RegularCustomer deleteRegularCustomer = new RegularCustomer.Builder("11").build();
+        
+        RegularCustomer returnQuestion = crudService.merge(deleteRegularCustomer);
+        when(crudService.merge(deleteRegularCustomer)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteRegularCustomer);
+        
+        returnQuestion = crudService.remove(deleteRegularCustomer);
+        when(crudService.remove(deleteRegularCustomer)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteRegularCustomer);
     }
     
     @Test

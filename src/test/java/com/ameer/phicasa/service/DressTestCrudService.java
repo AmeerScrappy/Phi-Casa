@@ -55,10 +55,15 @@ public class DressTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        Dress updateDress = new Dress.Builder("11").build();
-        Dress returnQuestion = crudService.merge(updateDress);
-        when(crudService.merge(updateDress)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateDress);
+        Dress deleteDress = new Dress.Builder("11").build();
+        
+        Dress returnQuestion = crudService.merge(deleteDress);
+        when(crudService.merge(deleteDress)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteDress);
+        
+        returnQuestion = crudService.remove(deleteDress);
+        when(crudService.remove(deleteDress)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteDress);
     }
     
     @Test

@@ -54,10 +54,15 @@ public class SalesTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        SalesTeam updateSalesTeam = new SalesTeam.Builder("11").build();
-        SalesTeam returnQuestion = crudService.merge(updateSalesTeam);
-        when(crudService.merge(updateSalesTeam)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateSalesTeam);
+        SalesTeam deleteSalesTeam = new SalesTeam.Builder("11").build();
+        
+        SalesTeam returnQuestion = crudService.merge(deleteSalesTeam);
+        when(crudService.merge(deleteSalesTeam)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteSalesTeam);
+        
+        returnQuestion = crudService.remove(deleteSalesTeam);
+        when(crudService.remove(deleteSalesTeam)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteSalesTeam);
     }
     
     @Test

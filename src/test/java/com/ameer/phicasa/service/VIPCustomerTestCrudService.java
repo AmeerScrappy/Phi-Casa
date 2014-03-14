@@ -54,10 +54,15 @@ public class VIPCustomerTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        VIPCustomer updateVIPCustomer = new VIPCustomer.Builder("11").build();
-        VIPCustomer returnQuestion = crudService.merge(updateVIPCustomer);
-        when(crudService.merge(updateVIPCustomer)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateVIPCustomer);
+        VIPCustomer deleteVIPCustomer = new VIPCustomer.Builder("11").build();
+        
+        VIPCustomer returnQuestion = crudService.merge(deleteVIPCustomer);
+        when(crudService.merge(deleteVIPCustomer)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteVIPCustomer);
+        
+        returnQuestion = crudService.remove(deleteVIPCustomer);
+        when(crudService.remove(deleteVIPCustomer)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteVIPCustomer);
     }
     
     @Test

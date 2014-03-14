@@ -54,10 +54,15 @@ public class CMTTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        CMT updateCMT = new CMT.Builder("11").build();
-        CMT returnQuestion = crudService.merge(updateCMT);
-        when(crudService.merge(updateCMT)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateCMT);
+        CMT deleteCMT = new CMT.Builder("11").build();
+        
+        CMT returnQuestion = crudService.merge(deleteCMT);
+        when(crudService.merge(deleteCMT)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteCMT);
+        
+        returnQuestion = crudService.remove(deleteCMT);
+        when(crudService.remove(deleteCMT)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteCMT);
     }
     
     @Test

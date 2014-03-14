@@ -54,10 +54,15 @@ public class UnderwareTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        Underware updateUnderware = new Underware.Builder("11").build();
-        Underware returnQuestion = crudService.merge(updateUnderware);
-        when(crudService.merge(updateUnderware)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateUnderware);
+        Underware deleteUnderware = new Underware.Builder("11").build();
+        
+        Underware returnQuestion = crudService.merge(deleteUnderware);
+        when(crudService.merge(deleteUnderware)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteUnderware);
+        
+        returnQuestion = crudService.remove(deleteUnderware);
+        when(crudService.remove(deleteUnderware)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteUnderware);
     }
     
     @Test

@@ -54,10 +54,15 @@ public class GraderTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        Grader updateGrader = new Grader.Builder("11").build();
-        Grader returnQuestion = crudService.merge(updateGrader);
-        when(crudService.merge(updateGrader)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateGrader);
+        Grader deleteGrader = new Grader.Builder("11").build();
+        
+        Grader returnQuestion = crudService.merge(deleteGrader);
+        when(crudService.merge(deleteGrader)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteGrader);
+        
+        returnQuestion = crudService.remove(deleteGrader);
+        when(crudService.remove(deleteGrader)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteGrader);
     }
     
     @Test

@@ -54,10 +54,15 @@ public class ShirtTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        Shirt updateShirt = new Shirt.Builder("11").build();
-        Shirt returnQuestion = crudService.merge(updateShirt);
-        when(crudService.merge(updateShirt)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateShirt);
+        Shirt deleteShirt = new Shirt.Builder("11").build();
+        
+        Shirt returnQuestion = crudService.merge(deleteShirt);
+        when(crudService.merge(deleteShirt)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteShirt);
+        
+        returnQuestion = crudService.remove(deleteShirt);
+        when(crudService.remove(deleteShirt)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteShirt);
     }
     
     @Test

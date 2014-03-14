@@ -55,10 +55,15 @@ public class KnitsTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        Knits updateKnits = new Knits.Builder("11").build();
-        Knits returnQuestion = crudService.merge(updateKnits);
-        when(crudService.merge(updateKnits)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updateKnits);
+        Knits deleteKnits = new Knits.Builder("11").build();
+        
+        Knits returnQuestion = crudService.merge(deleteKnits);
+        when(crudService.merge(deleteKnits)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deleteKnits);
+        
+        returnQuestion = crudService.remove(deleteKnits);
+        when(crudService.remove(deleteKnits)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deleteKnits);
     }
     
     @Test

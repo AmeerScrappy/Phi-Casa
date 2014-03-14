@@ -55,10 +55,15 @@ public class PatternMakerTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        PatternMaker updatePatternMaker = new PatternMaker.Builder("11").build();
-        PatternMaker returnQuestion = crudService.merge(updatePatternMaker);
-        when(crudService.merge(updatePatternMaker)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(updatePatternMaker);
+        PatternMaker deletePatternMaker = new PatternMaker.Builder("11").build();
+        
+        PatternMaker returnQuestion = crudService.merge(deletePatternMaker);
+        when(crudService.merge(deletePatternMaker)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(deletePatternMaker);
+        
+        returnQuestion = crudService.remove(deletePatternMaker);
+        when(crudService.remove(deletePatternMaker)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).remove(deletePatternMaker);
     }
     
     @Test
