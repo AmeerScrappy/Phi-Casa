@@ -6,6 +6,8 @@
 
 package com.ameer.phicasa.model.employees;
 
+import java.util.List;
+
 /**
  *
  * @author student
@@ -16,7 +18,8 @@ public final class CreativeDirector implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
-
+    private List<Employee> employeeTeamList;
+    
     private CreativeDirector(){
         
     }
@@ -26,6 +29,7 @@ public final class CreativeDirector implements Employee{
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
         EmpPhoneNumber = build.EmpPhoneNumber;
+        employeeTeamList = build.employeeTeamList;
     }
     
     public String getEmpID() {
@@ -43,6 +47,10 @@ public final class CreativeDirector implements Employee{
     public String getEmpPhoneNumber() {
         return EmpPhoneNumber;
     }
+
+    public List<Employee> getEmployeeTeamList() {
+        return employeeTeamList;
+    }
     
     public static class Builder{
         
@@ -50,6 +58,7 @@ public final class CreativeDirector implements Employee{
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
+        private List<Employee> employeeTeamList;
         
         public Builder(String EmpID){
             this.EmpID = "CEO"+EmpID;
@@ -69,6 +78,11 @@ public final class CreativeDirector implements Employee{
             EmpPhoneNumber = phoneNum;
             return this;
         }     
+        
+        public Builder getEmployeeTeamList(List<Employee> list){
+            employeeTeamList = list;
+            return this;
+        }
         
         public CreativeDirector build(){
             return new CreativeDirector(this);

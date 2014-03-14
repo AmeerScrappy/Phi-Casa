@@ -6,6 +6,9 @@
 
 package com.ameer.phicasa.model.employees;
 
+import com.ameer.phicasa.model.customers.Customer;
+import java.util.List;
+
 /**
  *
  * @author student
@@ -16,6 +19,7 @@ public final class SalesTeam implements Employee{
     private String EmpName;
     private String EmpSurname;
     private String EmpPhoneNumber;
+    private List<Customer> customerList;
 
     private SalesTeam(){
         
@@ -26,6 +30,7 @@ public final class SalesTeam implements Employee{
         EmpName = build.EmpName;
         EmpSurname = build.EmpSurname;
         EmpPhoneNumber = build.EmpPhoneNumber;
+        customerList = build.customerList;
     }
     
     public String getEmpID() {
@@ -44,12 +49,17 @@ public final class SalesTeam implements Employee{
         return EmpPhoneNumber;
     }
     
+    public List<Customer> getCustomerList() {
+        return customerList;
+    }
+    
     public static class Builder{
         
         private String EmpID;
         private String EmpName;
         private String EmpSurname;
         private String EmpPhoneNumber;
+        private List<Customer> customerList;
         
         public Builder(String EmpID){
             this.EmpID = "SALE"+EmpID;
@@ -70,6 +80,10 @@ public final class SalesTeam implements Employee{
             return this;
         }     
         
+        public Builder getCustomerList(List<Customer> List){
+            customerList = List;
+            return this;
+        }
         public SalesTeam build(){
             return new SalesTeam(this);
         }
