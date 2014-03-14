@@ -103,7 +103,7 @@ public class Underware implements Garment{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Skirt other = (Skirt) obj;
+        final Underware other = (Underware) obj;
         if ((this.GarmentID == null) ? (other.GarmentID != null) : !this.GarmentID.equals(other.GarmentID)) {
             return false;
         }

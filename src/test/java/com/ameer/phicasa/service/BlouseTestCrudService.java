@@ -53,15 +53,10 @@ public class BlouseTestCrudService {
     @Test
     public void testUpdate() throws Exception{
         
-        /*// THIS IS THE WRONG WAY TO DO THIS
-        // PLEASE FIX FIX FIX
-        // LEFT OUT FOR YOU TO FIGURE IT OUT
-
-        Question q1 = new Question.Builder("What is Java").id("1").build();
-
-        Question returnQuestion = crudService.merge(q1);
-        when(crudService.merge(q1)).thenReturn(returnQuestion);
-        Mockito.verify(crudService).merge(q1);*/
+        Blouse updateBlouse = new Blouse.Builder("11").build();
+        Blouse returnQuestion = crudService.merge(updateBlouse);
+        when(crudService.merge(updateBlouse)).thenReturn(returnQuestion);
+        Mockito.verify(crudService).merge(updateBlouse);
     }
     
     @Test
