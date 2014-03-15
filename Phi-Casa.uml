@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="434.0" y="95.0">com.ameer.phicasa.model.customers.VIPCustomer</node>
+    <node x="-572.0" y="-48.0">com.ameer.phicasa.model.garment.Blouse</node>
+    <node x="272.0" y="95.0">com.ameer.phicasa.model.customers.RegularCustomer</node>
+    <node x="-341.0" y="-241.0">com.ameer.phicasa.model.employees.GraphicDesigner</node>
+    <node x="136.0" y="-48.0">com.ameer.phicasa.model.garment.Underware</node>
+    <node x="-384.0" y="-48.0">com.ameer.phicasa.model.garment.Shirt</node>
+    <node x="-476.0" y="-48.0">com.ameer.phicasa.model.garment.Jacket</node>
+    <node x="282.0" y="-241.0">com.ameer.phicasa.model.employees.CMT</node>
+    <node x="-126.0" y="-48.0">com.ameer.phicasa.model.garment.Skirt</node>
+    <node x="-500.0" y="-241.0">com.ameer.phicasa.model.employees.FashionDesigner</node>
+    <node x="-301.0" y="-48.0">com.ameer.phicasa.model.garment.Knits</node>
+    <node x="-225.5" y="-147.0">com.ameer.phicasa.model.garment.Garment</node>
+    <node x="483.0" y="-241.0">com.ameer.phicasa.model.employees.PatternMaker</node>
+    <node x="-217.0" y="-48.0">com.ameer.phicasa.model.garment.Jersey</node>
+    <node x="46.0" y="-48.0">com.ameer.phicasa.model.garment.Pants</node>
+    <node x="361.0" y="-241.0">com.ameer.phicasa.model.employees.SalesTeam</node>
+    <node x="127.0" y="-241.0">com.ameer.phicasa.model.employees.CreativeDirector</node>
+    <node x="-44.0" y="-48.0">com.ameer.phicasa.model.garment.Dress</node>
+    <node x="369.75" y="16.0">com.ameer.phicasa.model.customers.Customer</node>
+    <node x="-33.0" y="-241.0">com.ameer.phicasa.model.employees.DistributionTeam</node>
+    <node x="-10.0" y="-340.0">com.ameer.phicasa.model.employees.Employee</node>
+    <node x="-183.0" y="-241.0">com.ameer.phicasa.model.employees.MarketingTeam</node>
+    <node x="-597.0" y="-241.0">com.ameer.phicasa.model.employees.Grader</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.ameer.phicasa.model.employees.DistributionTeam" target="com.ameer.phicasa.model.employees.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.FashionDesigner" target="com.ameer.phicasa.model.employees.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="-430.5" y="-281.0" />
+      <point x="5.6666666666667425" y="-281.0" />
+      <point x="-31.333333333333314" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.FashionDesigner" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.MarketingTeam" target="com.ameer.phicasa.model.employees.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="-118.0" y="-261.0" />
+      <point x="26.555555555555543" y="-261.0" />
+      <point x="-10.444444444444457" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.garment.Skirt" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="-14.5" />
+      <point x="-95.0" y="-68.0" />
+      <point x="-171.72222222222223" y="-68.0" />
+      <point x="9.777777777777771" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.GraphicDesigner" target="com.ameer.phicasa.model.employees.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="-272.0" y="-271.0" />
+      <point x="16.111111111111086" y="-271.0" />
+      <point x="-20.888888888888914" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.PatternMaker" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.Grader" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.garment.Underware" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="-14.5" />
+      <point x="187.0" y="-98.0" />
+      <point x="-142.3888888888889" y="-98.0" />
+      <point x="39.111111111111086" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.garment.Blouse" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="-14.5" />
+      <point x="-534.0" y="-98.0" />
+      <point x="-220.6111111111111" y="-98.0" />
+      <point x="-39.111111111111086" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.SalesTeam" target="com.ameer.phicasa.model.customers.Customer">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.garment.Shirt" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="-14.5" />
+      <point x="-352.5" y="-78.0" />
+      <point x="-201.05555555555554" y="-78.0" />
+      <point x="-19.555555555555543" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.Grader" target="com.ameer.phicasa.model.employees.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="-558.5" y="-291.0" />
+      <point x="-4.777777777777828" y="-291.0" />
+      <point x="-41.77777777777777" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.CMT" target="com.ameer.phicasa.model.employees.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="311.5" y="-271.0" />
+      <point x="57.888888888888914" y="-271.0" />
+      <point x="20.888888888888914" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.garment.Dress" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="-14.5" />
+      <point x="-9.0" y="-78.0" />
+      <point x="-161.94444444444446" y="-78.0" />
+      <point x="19.555555555555543" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.customers.VIPCustomer" target="com.ameer.phicasa.model.customers.Customer">
+      <point x="0.0" y="-14.5" />
+      <point x="490.5" y="70.0" />
+      <point x="440.25" y="70.0" />
+      <point x="23.5" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.garment.Pants" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="-14.5" />
+      <point x="81.0" y="-88.0" />
+      <point x="-152.16666666666663" y="-88.0" />
+      <point x="29.33333333333337" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.garment.Jersey" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.CreativeDirector" target="com.ameer.phicasa.model.employees.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="194.5" y="-261.0" />
+      <point x="47.44444444444446" y="-261.0" />
+      <point x="10.444444444444457" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.PatternMaker" target="com.ameer.phicasa.model.employees.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="542.5" y="-291.0" />
+      <point x="78.77777777777783" y="-291.0" />
+      <point x="41.77777777777783" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.garment.Jacket" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="-14.5" />
+      <point x="-440.0" y="-88.0" />
+      <point x="-210.83333333333331" y="-88.0" />
+      <point x="-29.333333333333314" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.garment.Knits" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="-14.5" />
+      <point x="-269.0" y="-68.0" />
+      <point x="-191.27777777777777" y="-68.0" />
+      <point x="-9.777777777777771" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.customers.RegularCustomer" target="com.ameer.phicasa.model.customers.Customer">
+      <point x="0.0" y="-14.5" />
+      <point x="343.0" y="70.0" />
+      <point x="393.25" y="70.0" />
+      <point x="-23.5" y="14.5" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.CMT" target="com.ameer.phicasa.model.garment.Garment">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.ameer.phicasa.model.employees.SalesTeam" target="com.ameer.phicasa.model.employees.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="412.0" y="-281.0" />
+      <point x="68.33333333333337" y="-281.0" />
+      <point x="31.33333333333337" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="56.0" y="20.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
